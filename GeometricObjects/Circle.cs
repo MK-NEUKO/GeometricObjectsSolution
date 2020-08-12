@@ -54,5 +54,11 @@ namespace GeometricObjects
             return perimeter;
         }
 
+        public void Move(double dx, double dy)
+        {
+            XCoordinate += dx;
+            YCoordinate += dy;
+        }
+
     }
 }

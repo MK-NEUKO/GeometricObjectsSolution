@@ -11,12 +11,11 @@ namespace GeometricObjects
         static void Main(string[] args)
         {
             Circle kreis = new Circle();
-            kreis.Radius = 12;
-            // Kreisföäche abrufen
-            double area = kreis.GetArea();
-            Console.WriteLine($"Fläche = {area}");
-            // Kreisumfang abrufen
-            Console.WriteLine($"Umfang = {kreis.GetPerimeter()}");
+            kreis.XCoordinate = -100;
+            kreis.YCoordinate = 90;
+            Console.WriteLine($"Koordinaten bevor Move() = {kreis.XCoordinate}, + {kreis.YCoordinate}");
+            kreis.Move(120, -200);
+            Console.WriteLine($"Koordinaten nach Move(120, -200) = {kreis.XCoordinate}, + {kreis.YCoordinate}");
             Console.ReadLine();
         }
     }
