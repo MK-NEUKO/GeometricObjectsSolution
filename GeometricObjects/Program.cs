@@ -10,12 +10,14 @@ namespace GeometricObjects
     {
         static void Main(string[] args)
         {
-            Circle kreis = new Circle();
-            kreis.XCoordinate = -100;
-            kreis.YCoordinate = 90;
-            Console.WriteLine($"Koordinaten bevor Move() = {kreis.XCoordinate}, + {kreis.YCoordinate}");
-            kreis.Move(120, -200);
-            Console.WriteLine($"Koordinaten nach Move(120, -200) = {kreis.XCoordinate}, + {kreis.YCoordinate}");
+            Circle kreis1 = new Circle();
+            kreis1.Radius = 12;
+            Circle kreis2 = new Circle();
+            kreis2.Radius = 23;
+            if (kreis1.Bigger(kreis2) == -1) 
+            {
+                Console.WriteLine("kreis1 < kreis2");
+            }
             Console.ReadLine();
         }
     }

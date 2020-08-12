@@ -17,7 +17,7 @@ namespace GeometricObjects
         }
 
         private double _YCoordinate;
-
+      
         public double YCoordinate
         {
             get { return _YCoordinate; }
@@ -59,6 +59,21 @@ namespace GeometricObjects
             XCoordinate += dx;
             YCoordinate += dy;
         }
+
+        public int Bigger(Circle kreis)
+        {
+            if (kreis == null || Radius > kreis.Radius)
+            {
+                return 1;
+            }
+            if (Radius < kreis.Radius)
+            {
+                return -1;
+            }
+            else
+                return 0;
+        }
+
 
     }
 }
