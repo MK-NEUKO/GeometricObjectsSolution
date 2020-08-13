@@ -60,6 +60,12 @@ namespace GeometricObjects
             YCoordinate += dy;
         }
 
+        public void Move(double dx, double dy, int dRadius)
+        {
+            Move(dx, dy);
+            Radius += dRadius;
+        }
+
         public int Bigger(Circle kreis)
         {
             if (kreis == null || Radius > kreis.Radius)
